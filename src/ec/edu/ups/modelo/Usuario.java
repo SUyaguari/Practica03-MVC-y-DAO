@@ -1,6 +1,8 @@
 
 package ec.edu.ups.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,9 +14,11 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String correo;
-    private String contraseña;    
+    private String contraseña;
+    private List<Telefono> agregarTelefonos;
 
     public Usuario() {
+        agregarTelefonos = new ArrayList<>();
     }
 
     public Usuario(String cedula, String nombre, String apellido, String correo, String contraseña) {
@@ -63,6 +67,10 @@ public class Usuario {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+    
+    public void agregarTelefonos(Telefono telefono){
+        agregarTelefonos.add(telefono);
     }
 
     @Override

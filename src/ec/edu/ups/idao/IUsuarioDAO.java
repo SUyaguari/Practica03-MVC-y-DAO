@@ -9,9 +9,9 @@ import java.util.List;
 public interface IUsuarioDAO {
     
     public List<Usuario> obtenerClientes();
-    public void create();
-    public void read();
-    public void update();
-    public void delite();
+    public void create(Usuario usuario);
+    public Usuario read(String cedula);
+    public void update(Usuario usuario);
+    public void delite(Usuario usuario);
     
 }
