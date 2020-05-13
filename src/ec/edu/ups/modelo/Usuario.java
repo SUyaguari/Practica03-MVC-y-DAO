@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Estudiantes
+ * @author SUyaguari
  */
 public class Usuario {
     private String cedula;
