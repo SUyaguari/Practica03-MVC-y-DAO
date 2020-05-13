@@ -10,9 +10,9 @@ import java.util.List;
 public interface ITelefonoDAO {
     
     public List<Telefono> obtenerTelefonos();
-    public void create();
-    public void read();
-    public void update();
-    public void delite();
+    public void create(Telefono telefono);
+    public Telefono read(int codigo);
+    public void update(Telefono telefono);
+    public void delite(Telefono telefono);
     
 }
