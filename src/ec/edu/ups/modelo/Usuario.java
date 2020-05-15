@@ -27,6 +27,7 @@ public class Usuario {
         this.apellido = apellido;
         this.correo = correo;
         this.contraseña = contraseña;
+        agregarTelefonos = new ArrayList<>();
     }
 
     public String getCedula() {

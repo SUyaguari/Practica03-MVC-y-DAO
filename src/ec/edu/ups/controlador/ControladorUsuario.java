@@ -64,4 +64,11 @@ public class ControladorUsuario {
         usuario.agregarTelefonos(telefono);
         usuarioDAO.update(usuario);
     }
+    
+    public boolean inicioSesion(){
+        String correo = vistaUsuario.inicioSesionCorreo();
+        String contraseña = vistaUsuario.inicioSesionContraseña();
+        boolean centinela = usuarioDAO.inicioSesion(correo, contraseña);
+        return centinela;
+    }
 }

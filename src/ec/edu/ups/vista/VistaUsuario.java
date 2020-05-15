@@ -79,4 +79,20 @@ public class VistaUsuario {
             System.out.println("Datos del usuario: "+ usuario);
         }
     }
+    
+    public String inicioSesionCorreo(){
+        Scanner leer = new Scanner(System.in);
+        String correo;
+        System.out.print("Ingrese el correo: ");
+        correo= leer.next();
+        return correo;
+    }
+    
+    public String inicioSesionContraseña(){
+        Scanner leer = new Scanner(System.in);
+        String contraseña;
+        System.out.print("Ingrese la contraseña: ");
+        contraseña= leer.next();
+        return contraseña;
+    }
 }

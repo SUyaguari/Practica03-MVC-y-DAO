@@ -63,8 +63,15 @@ public class UsuarioDAO implements IUsuarioDAO{
             }
         }
     }
-
     
-
+    @Override
+    public boolean inicioSesion(String correo, String contraseña){
+        for (Usuario usuario : listaUsuario) {
+            if(usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(contraseña)){
+                return true; 
+            }
+        }
+        return false;
+    }    
     
 }

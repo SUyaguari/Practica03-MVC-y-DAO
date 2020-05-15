@@ -13,5 +13,5 @@ public interface IUsuarioDAO {
     public Usuario read(String cedula);
     public void update(Usuario usuario);
     public void delite(Usuario usuario);
-    
+    public boolean inicioSesion(String correo, String contraseña);
 }
