@@ -1,4 +1,3 @@
-
 package ec.edu.ups.modelo;
 
 import java.util.ArrayList;
@@ -69,6 +68,15 @@ public class Usuario {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
+
+    public List<Telefono> getAgregarTelefonos() {
+        return agregarTelefonos;
+    }
+
+    public void setAgregarTelefonos(List<Telefono> agregarTelefonos) {
+        this.agregarTelefonos = agregarTelefonos;
+    }
+    
     
     public void agregarTelefonos(Telefono telefono){
         agregarTelefonos.add(telefono);

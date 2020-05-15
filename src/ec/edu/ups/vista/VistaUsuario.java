@@ -1,6 +1,7 @@
 package ec.edu.ups.vista;
 
 import ec.edu.ups.modelo.Usuario;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class VistaUsuario {
     
     private Scanner leer;
+    HashMap<String, String> u = new HashMap<>();
 
     public VistaUsuario() {
         leer = new Scanner(System.in);
@@ -32,7 +34,13 @@ public class VistaUsuario {
         correo = leer.next();
         System.out.print("Ingrese la contraseña de la persona: ");
         contraseña = leer.next();
-        return new Usuario(cedula, nombre, apellido, correo, contraseña);
+        if (!u.containsKey(correo)) {
+            u.put(correo, contraseña);
+            return new Usuario(cedula, nombre, apellido, correo, contraseña);
+        }else{
+            System.out.println("Correo ocupado");
+            return null;
+        }
     }
      
     public String ingresoCedula(){
@@ -94,5 +102,30 @@ public class VistaUsuario {
         System.out.print("Ingrese la contraseña: ");
         contraseña= leer.next();
         return contraseña;
+    }
+    
+    public String listaTelefono(){
+        Scanner leer = new Scanner(System.in);
+        int opcion;
+        String cedula;
+        String correo;
+        System.out.println("[1] buscar por cedula");
+        System.out.println("[2] buscar por correo");
+        opcion= leer.nextInt();
+        if(opcion==1){
+            System.out.print("Ingrese la cedula: ");
+            cedula = leer.next();
+            if(u.containsKey(cedula)){
+                return cedula;
+           }
+        }
+        if(opcion==2){
+            System.out.print("Ingrese el correo: ");
+            correo = leer.next();
+            if(u.containsKey(correo)){
+                return u.get(correo);
+            }
+        }
+        return null;
     }
 }

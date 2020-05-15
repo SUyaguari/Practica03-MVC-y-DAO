@@ -71,4 +71,10 @@ public class ControladorUsuario {
         boolean centinela = usuarioDAO.inicioSesion(correo, contraseña);
         return centinela;
     }
+    
+    public void listar(){
+        String u = vistaUsuario.listaTelefono();
+        usuarioDAO.read(u);
+        vistaTelefono.mostrarTelefono(telefono);
+    }
 }

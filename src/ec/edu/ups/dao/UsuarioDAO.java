@@ -72,6 +72,5 @@ public class UsuarioDAO implements IUsuarioDAO{
             }
         }
         return false;
-    }    
-    
+    }
 }

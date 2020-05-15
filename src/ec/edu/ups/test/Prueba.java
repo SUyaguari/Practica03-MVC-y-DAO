@@ -27,7 +27,7 @@ public class Prueba {
         
         int opcion;
         do{
-            System.out.println("¨¨¨¨¨¨¨¨¨¨MENU¨¨¨¨¨¨¨¨");
+            System.out.println("¨¨¨¨¨¨¨¨¨¨MENU¨¨¨¨¨¨¨");
             System.out.println("[1] Registrarse");
             System.out.println("[2] Iniciar Sesion");
             System.out.println("[3] Consulta de usuarios");
@@ -57,7 +57,8 @@ public class Prueba {
                             System.out.println("[4] Buscar numero de telefono");
                             System.out.println("[5] Consultar numeros de telefonos");
                             System.out.println("[6] Agregar numeros de telefonos");
-                            System.out.println("[7] Cerrar Sesion");
+                            System.out.println("[7] Listar telefonos");
+                            System.out.println("[8] Cerrar Sesion");
                             System.out.print("ingrese una opcion: ");
                             opcion2 = leer.nextInt();
                             switch(opcion2){
@@ -80,13 +81,16 @@ public class Prueba {
                                     controladorUsuario.agregarTelefonos();
                                     break;
                                 case 7:
+                                    controladorUsuario.listar();
+                                    break;
+                                case 8:
                                     System.out.println("Cerrando sesion....");
                                     break;
                                 default:
                                     System.out.println("Ingrese una opcon valida");
                                     break;
                             }
-                        } while (opcion2!=7);
+                        } while (opcion2!=8);
                         System.out.println("Sesion");
                     }else{
                         System.out.println("\tusuario no registrado");
