@@ -49,12 +49,12 @@ public class VistaTelefono {
         return new Telefono(codigo, numero, tipo, operadora);
     }
     
-    public int eliminarTelefono(){
+    public Telefono eliminarTelefono(){
         Scanner leer = new Scanner(System.in);
         int codigo;
         System.out.print("Ingrese el codigo del telefono: ");
         codigo = leer.nextInt();
-        return codigo;
+        return new Telefono(codigo, null, null, null);
     }
     
     public int buscarTelefono(){
@@ -69,5 +69,9 @@ public class VistaTelefono {
         for (Telefono telefono : listaTelefono) {
             System.out.println("Datos: \n"+telefono);
         }
+    }
+    
+    public void mostrarTelefono(Telefono telefono){
+        System.out.println("Datos del telefono: "+telefono);
     }
 }

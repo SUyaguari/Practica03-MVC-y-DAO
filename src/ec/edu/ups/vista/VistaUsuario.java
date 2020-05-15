@@ -34,22 +34,7 @@ public class VistaUsuario {
         contraseña = leer.next();
         return new Usuario(cedula, nombre, apellido, correo, contraseña);
     }
-    
-    public String ingresoCorreo(){
-        Scanner leer = new Scanner(System.in);
-        String correo;
-        System.out.print("Ingrese el correo");
-        correo = leer.next();
-        return correo;
-    }
-    public String ingresoContraseña(){
-        Scanner leer = new Scanner(System.in);
-        String contraseña;
-        System.out.print("Ingrese el correo");
-        contraseña = leer.next();
-        return contraseña;
-    }
-    
+     
     public String ingresoCedula(){
         Scanner leer = new Scanner(System.in);
         String cedula;
