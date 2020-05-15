@@ -59,6 +59,9 @@ public class ControladorUsuario {
     }
     
     public void agregarTelefonos(){
-        
+        int codigo = vistaTelefono.buscarTelefono();
+        telefono = telefonoDAO.read(codigo);
+        usuario.agregarTelefonos(telefono);
+        usuarioDAO.update(usuario);
     }
 }
